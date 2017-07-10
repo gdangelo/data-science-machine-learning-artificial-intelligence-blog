@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = u"Gr\xe9gory D'Angelo"
 SITENAME = u"Gr\xe9gory D'Angelo - Data Science, Machine Learning, & Artificial Intelligence"
 SITEURL = ''
+THEME = 'theme/'
 
 PATH = 'content'
 
@@ -34,4 +35,6 @@ SOCIAL = (('twitter', 'http://twitter.com/gdangel0'),
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
+
+DIRECT_TEMPLATES = ['index']
