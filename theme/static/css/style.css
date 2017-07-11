@@ -513,6 +513,59 @@ figcaption p {
   transform: translate3d(0,20px,0) scale(1.1);
 }
 
+/* Homepage styles : Blog section
+-------------------------------------------------- */
+.blog-section {
+  color: #fff;
+  text-align: center;
+  background-color: #33aacc;
+  background-image: -webkit-linear-gradient(315deg, rgba(148, 0, 222, .8), rgba(0, 176, 235, .8)), url(../../theme/img/blog-section.jpeg);
+  background-image: linear-gradient(135deg, rgba(148, 0, 222, .8), rgba(0, 176, 235, .8)), url(../../theme/img/blog-section.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+}
+.blog-section a[type="button"] {
+  margin-top: 50px;
+  border-radius: 4px;
+  border-color: #fff;
+  color: #fff;
+  background-color: transparent;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+.blog-section a[type="button"]:hover {
+  border-color: #ffca2b;
+}
+.blog-section .categories {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.blog-section .categories .category-link {
+  text-decoration: none;
+  color: #000;
+  background-color: #FFF;
+  width: calc(33.3% - 1rem);
+  height: 90px;
+  margin: 0.5rem;
+  line-height: 90px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: transform 0.5s;
+}
+.blog-section .categories .category-link:hover {
+  background: linear-gradient(0deg, #ffca2b, #fcd86c);
+  transform: scale(1.05);
+}
+
 /* Homepage styles : Contact section
 -------------------------------------------------- */
 .contact-section form {
