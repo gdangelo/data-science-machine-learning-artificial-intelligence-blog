@@ -1,8 +1,39 @@
 {% extends "base.html" %}
 
 {% block extra_js %}
+<!-- particle.js -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<!-- Typed.js -->
+<script src="{{SITEURL}}/theme/js/typed.min.js"></script>
+
+<!-- home.js -->
+<script src="{{SITEURL}}/theme/js/home.js"></script>
 {% endblock extra_js %}
 
 {% block content %}
-
+<!-- Intro Section -->
+<section id="intro" class="intro-section">
+  <div id="particles-js"></div>
+  <div class="display-table">
+    <div class="display-table-cell">
+      <div class="container">
+        <div class="row">
+          <div class="head-text">
+            <h1 class="tagline">
+              Hi, I'm
+              <span id="typed"></span>
+            </h1>
+            <h3 class="sub-tagline">Data Scientist / Machine Learning Engineer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nextSection">
+    <a href="#about" class="smooth-scroll">
+      <span class='icon-scroll'><span/>
+    </a>
+  </div>
+</section>
 {% endblock content %}
