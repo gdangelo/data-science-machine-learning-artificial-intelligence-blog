@@ -512,3 +512,57 @@ figcaption p {
   -webkit-transform: translate3d(0,20px,0) scale(1.1);
   transform: translate3d(0,20px,0) scale(1.1);
 }
+
+/* Homepage styles : Contact section
+-------------------------------------------------- */
+.contact-section form {
+  box-shadow: 0 1px 4px 1px hsla(0, 0%, 53%, .27);
+  max-width: 70%;
+  margin: 0 auto;
+}
+.contact-section .field {
+  display: block;
+  width: 100%;
+  height: 58px;
+  padding: 8px 12px;
+  border: 0px solid #000;
+  background-color: #fff;
+}
+.contact-section .field:focus {
+  box-shadow: inset 2px 0 0 0 #249cff;
+}
+.contact-section input {
+  box-shadow: inset 2px 0 0 0 transparent;
+  -webkit-transition: box-shadow 300ms ease;
+  transition: box-shadow 300ms ease;
+  color: #249cff;
+  font-size: 17px;
+  font-weight: 300;
+  vertical-align: middle;
+}
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #3898EC;
+  outline: 0;
+}
+.contact-section textarea.field {
+  height: 128px;
+  max-width: 100%;
+}
+.contact-section input.grey {
+  background-color: #f7f7f7;
+}
+.contact-section .button {
+  width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-width: 0px;
+  background-color: #d1d1d1;
+  color: #fff;
+  font-weight: 300;
+  -webkit-transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+}
+.contact-section .button:hover {
+  background-color: #249cff;
+}
