@@ -1,0 +1,24 @@
+<section id="footer" class="footer-section grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="social-links">
+          <ul>
+            {% for tuple in SOCIAL %}
+              {% if tuple[0] == 'email' %}
+                <li><a href="mailto:{{tuple[1]}}"><i class="fa fa-envelope"></i></a></li>
+              {% elif tuple[0] == 'linkedin' %}
+                <li><a href="{{tuple[1]}}"><i class="fa fa-linkedin"></i></a></li>
+              {% elif tuple[0] == 'twitter' %}
+                <li><a href="{{tuple[1]}}"><i class="fa fa-twitter"></i></a></li>
+              {% elif tuple[0] == 'github' %}
+                <li><a href="{{tuple[1]}}"><i class="fa fa-github"></i></a></li>
+              {%endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        <p>Copyright &copy; 2015 - <script type="text/javascript">document.write(new Date().getFullYear());</script> {{AUTHOR}} | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>

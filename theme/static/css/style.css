@@ -566,3 +566,35 @@ figcaption p {
 .contact-section .button:hover {
   background-color: #249cff;
 }
+
+/* Footer styles
+-------------------------------------------------- */
+.footer-section {
+  clear: both;
+  padding: 20px 0px;
+  text-align: center;
+}
+.social-links ul {
+  margin: 0;
+  padding: 0;
+}
+.social-links ul li {
+  list-style: none;
+  display: inline-block;
+}
+.social-links ul li a {
+  color: #249cff;
+  opacity: 0.8;
+  font-size: 20px;
+  margin: 20px 10px;
+  display: block;
+  cursor: pointer;
+}
+.social-links ul li a:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+.footer-section p {
+  margin-bottom: 0;
+  font-size: 16px;
+}
