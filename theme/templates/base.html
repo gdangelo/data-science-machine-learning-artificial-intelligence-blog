@@ -52,6 +52,86 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="{{SITEURL}}">{{AUTHOR}}</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse">
+        <ul class="social-links nav navbar-nav navbar-right">
+          {% for tuple in SOCIAL %}
+            {% if tuple[0] == 'linkedin' %}
+              <li><a href="{{tuple[1]}}"><i class="fa fa-linkedin"></i></a></li>
+            {% elif tuple[0] == 'twitter' %}
+              <li><a href="{{tuple[1]}}"><i class="fa fa-twitter"></i></a></li>
+            {% elif tuple[0] == 'github' %}
+              <li><a href="{{tuple[1]}}"><i class="fa fa-github"></i></a></li>
+            {%endif %}
+          {% endfor %}
+        </ul>
+        <div class="search-button navbar-right">
+          <i class="glyphicon glyphicon-search"></i>
+        </div>
+        <ul class="menu-links nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="{{SITEURL}}/about.html">About Greg</a></li>
+              {% for tuple in SOCIAL %}
+                {% if tuple[0] == 'linkedin' %}
+                  <li><a href="{{tuple[1]}}">LinkedIn</a></li>
+                {% elif tuple[0] == 'twitter' %}
+                  <li><a href="{{tuple[1]}}">Twitter</a></li>
+                {% elif tuple[0] == 'github' %}
+                  <li><a href="{{tuple[1]}}">Github</a></li>
+                {% elif tuple[0] == 'kaggle' %}
+                  <li><a href="{{tuple[1]}}">Kaggle</a></li>
+                {% elif tuple[0] == 'udacity' %}
+                  <li><a href="{{tuple[1]}}">Udacity</a></li>
+                {%endif %}
+              {% endfor %}
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Project 1</a></li>
+              <li><a href="#">Project 2</a></li>
+              <li><a href="#">Project 3</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              {% for category in categories|sort %}
+                <li><a href="{{SITEURL}}/category/{{category[0].slug}}.html">{{category[0]}}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        </ul>
+        <div class="search-wrapper">
+          <div class="row search-bar">
+            <div class="search-close">
+              <i class="glyphicon glyphicon-remove"></i>
+            </div>
+            <form role="search" method="get" action="">
+              <input class="search-input" type="search" placeholder="e.g. sklearn KNN, pandas merge" value="" name="s" autocomplete="off">
+            </form>
+          </div>
+        </div>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
   <div class="main-content container">
     {% block content %}{% endblock %}
   </div>
