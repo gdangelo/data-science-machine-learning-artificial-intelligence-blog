@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ AUTHOR }} | About
+{% endblock title %}
+
+{% block content %}
+<section class="header red">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class=main-heading>About me</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="section-title">
+          <h2>Hey there!</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- TO FILL -->
+    </div>
+  </div>
+</section>
+
+<section class="contact-me">
+  <a href="{{SITEURL}}/contact" type="button" class="btn btn-lg">Contact Me</a>
+</section>
+{% endblock content %}

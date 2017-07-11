@@ -652,6 +652,36 @@ figcaption p {
   font-size: 16px;
 }
 
+/* About page styles
+-------------------------------------------------- */
+section.contact-me {
+  text-align: center;
+}
+.btn {
+  margin-right: 0px;
+  border-color: #000;
+  color: #000;
+  border-radius: 0;
+  border: 2px solid #000;
+  -webkit-transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+  transition: background-color 250ms ease, color 250ms ease, border-color 250ms ease;
+  text-transform: capitalize;
+  background-color: #fff;
+}
+.btn:hover {
+  border-color: #249cff;
+  color: #249cff;
+}
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* Contact page styles
 -------------------------------------------------- */
 section.header {
