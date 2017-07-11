@@ -393,3 +393,122 @@ section.grey {
   color: #000;
   text-decoration: none;
 }
+
+/* Homepage styles : Work section
+-------------------------------------------------- */
+ul.work {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+ul.work li {
+  display: inline-block;
+  padding-bottom: 4px;
+  margin: 0 8px;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #938d8d;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  border-bottom: 2px solid transparent;
+}
+ul.work li:hover {
+  color: #000;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+ul.work li.mixitup-control-active {
+  color: #000;
+}
+.work-section .col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+.grid {
+  position: relative;
+  clear: both;
+  margin: 0 auto;
+  list-style: none;
+  text-align: center;
+}
+figure {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  min-width: 320px;
+  max-width: 480px;
+  max-height: 360px;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+figure:hover {
+  background-color: #000;
+}
+figure img {
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+figure:hover img {
+  opacity: 0.5;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+figure:hover h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
+}
+figure:hover p {
+  opacity: 1;
+  -webkit-transform: translate3d(0,0,0) scale(1);
+  transform: translate3d(0,0,0) scale(1);
+}
+figcaption, figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+figcaption h2 {
+  margin-top: 20%;
+  opacity: 0;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-transition: .3s;
+  transition: .3s;
+  display: inline-block;
+  color: #fff;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0);
+  transform: translate3d(0,20px,0);
+}
+figcaption p {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0,20px,0) scale(1.1);
+  transform: translate3d(0,20px,0) scale(1.1);
+}
