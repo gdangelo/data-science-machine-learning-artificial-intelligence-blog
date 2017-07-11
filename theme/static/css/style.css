@@ -18,6 +18,16 @@ section {
 section.grey {
   background-color: #F7F7F7;
 }
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.section-title h2 {
+  margin-top: 0;
+  font-weight: 900;
+  text-transform: capitalize;
+  font-size: 45px;
+}
 
 /* Navbar styles
 -------------------------------------------------- */
@@ -329,4 +339,57 @@ section.grey {
     opacity: 0;
     transform: translateY(46px);
   }
+}
+
+/* Homepage styles : About section
+-------------------------------------------------- */
+.about-section {
+  font-size: 1.2em;
+}
+@media (min-width: 332px) {
+  .welcome-text blockquote {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .about-section {
+    padding-bottom: 0;
+  }
+  .welcome-text {
+    padding-left: 20px;
+  }
+  .welcome-text blockquote {
+    text-align: left;
+  }
+}
+.welcome-img img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+.welcome-text blockquote {
+  border: none;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1.45;
+  position: relative;
+}
+.welcome-text blockquote:before {
+  display: block;
+  content: "\201C";
+  font-size: 80px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  color: #7a7a7a;
+}
+.highlight {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 2px solid #ffc932;
+}
+.highlight:hover {
+  color: #000;
+  text-decoration: none;
 }
