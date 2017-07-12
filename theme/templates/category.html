@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}{{ category }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block extra_js %}
+<!-- masonry.js -->
+<script src="{{SITEURL}}/theme/js/masonry.pkgd.min.js"></script>
+
+<!-- catagory.js -->
+<script src="{{SITEURL}}/theme/js/category.js"></script>
+{% endblock extra_js %}
+
+{% block content %}
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class=main-heading>{{ category }}</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="category-content">
+  <div class="container">
+    <div class="grid">
+      <div class="grid-sizer"></div>
+      {% for article in articles|sort(attribute='date') %}
+      <div class="grid-item">
+        {% block loop_item scoped %}
+        <div class="article-wrap">
+          <div class="article-head">
+            <a href="{{SITEURL}}/{{article.url}}" title="{{article.title}}">
+              <img src="{{SITEURL}}/theme/img/project-2.jpg" alt="{{article.title}}">
+            </a>
+          </div>
+          <div class="article-text">
+            <div class="article-meta">
+              <div class="meta-tags">
+                <i class="fa fa-th" aria-hidden="true"></i>
+                {% for tag in article.tags|sort %}
+                  <a href="{{SITEURL}}/tag/{{tag.slug}}.html">{{tag}}{% if not loop.last %},{% endif %}</a>
+                {% endfor %}
+              </div>
+            </div>
+            <h2><a href="{{SITEURL}}/{{article.url}}" title="{{article.title}}">{{article.title}}</a></h2>
+            <div class="excerpt">
+              <a class="read-more" href="{{SITEURL}}/{{article.url}}"></a>
+            </div>
+          </div>
+        </div>
+        {% endblock %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

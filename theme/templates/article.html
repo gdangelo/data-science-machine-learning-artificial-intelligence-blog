@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} | {{ article.category }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+    <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+
+{% endblock %}
+
+{% block content %}
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class=main-heading>{{ article.title }}</h2>
+        <ol class="breadcrumb">
+          <li>
+            <time class="published" datetime="{{ article.date.isoformat() }}">
+                {{ article.date.strftime("%d %B %Y") }}
+            </time>
+          </li>
+          <li><a href="{{SITEURL}}/category/{{article.category.slug}}.html">{{ article.category }}</a></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="article-content">
+  <div class="container">
+    {{ article.content }}
+  </div>
+</section>
+{% endblock %}
