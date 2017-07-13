@@ -47,4 +47,4 @@ MARKUP = ('md', 'ipynb')
 PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
 
-DIRECT_TEMPLATES = ['index', 'about', 'contact']
+DIRECT_TEMPLATES = ['index', 'about', 'contact', 'search']

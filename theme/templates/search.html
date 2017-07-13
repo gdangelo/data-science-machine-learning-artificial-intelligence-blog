@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Search {{ super() }}
+{% endblock title %}
+
+{% block head_description %}
+  Search results:
+{% endblock head_description %}
+
+{% block extra_css %}
+  <link href="{{ SITEURL }}/theme/tipuesearch/css/tipuesearch.css" rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block extra_js %}
+  <!-- masonry.js -->
+  <script src="{{SITEURL}}/theme/js/masonry.pkgd.min.js"></script>
+
+  <!-- catagory.js -->
+  <script src="{{SITEURL}}/theme/js/category.js"></script>
+
+  <!-- tipuesearch.js -->
+  <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_content.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch_set.js"></script>
+  <script type="text/javascript" src="{{ SITEURL }}/theme/tipuesearch/tipuesearch.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('#tipue_search_input').tipuesearch({
+        'mode' : 'json',
+        'show': 1000,
+        'contentLocation': '{{ SITEURL }}/tipuesearch_content.json'
+      });
+    });
+  </script>
+{% endblock extra_js %}
+
+{% block content %}
+<section class="header">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class=main-heading>{{ articles|length }} articles</h2>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="search-content">
+  <div class="row">
+    <aside class="col-sm-3 search-filters">
+      <div class="filter-category">
+        <h2>Category</h2>
+        <ul>
+          {% for category, articles in categories %}
+            <li>
+              <a href="{{SITEURL}}/category/{{category.slug}}.html">{{category}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="filter-tag">
+        <h2>Tags</h2>
+        <ul>
+          {% for tag, articles in tags %}
+            <li>
+              <a href="{{SITEURL}}/tag/{{tag.slug}}.html">{{tag}}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </aside>
+    <div class="col-sm-9 search-results">
+      <div class="search-input-filter input-group">
+        <span class="input-group-addon">
+          <i class="fa fa-search"></i>
+        </span>
+        <input class="search-input" type="text" placeholder="Filter posts..." value="">
+      </div>
+      <div class="search-articles grid">
+          <div class="grid-sizer"></div>
+          {% for article in articles|sort(attribute='date') %}
+          <div class="grid-item">
+            {% block loop_item scoped %}
+            <div class="article-wrap">
+              <div class="article-head">
+                <a href="{{SITEURL}}/{{article.url}}" title="{{article.title}}">
+                  <img src="{{SITEURL}}/theme/img/project-2.jpg" alt="{{article.title}}">
+                </a>
+              </div>
+              <div class="article-text">
+                <div class="article-meta">
+                  <div class="meta-tags">
+                    <i class="fa fa-th" aria-hidden="true"></i>
+                    {% for tag in article.tags|sort %}
+                      <a href="{{SITEURL}}/tag/{{tag.slug}}.html">{{tag}}{% if not loop.last %},{% endif %}</a>
+                    {% endfor %}
+                  </div>
+                </div>
+                <h2><a href="{{SITEURL}}/{{article.url}}" title="{{article.title}}">{{article.title}}</a></h2>
+                <div class="excerpt">
+                  <a class="read-more" href="{{SITEURL}}/{{article.url}}"></a>
+                </div>
+              </div>
+            </div>
+            {% endblock %}
+          </div>
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+</section>
+<!-- <div id="tipue_search_content"></div> -->
+{% endblock content %}
