@@ -12,9 +12,12 @@
 
 ## Quickstart
 
-Clone the repo, then run:
-
 ```
+# Clone the repo
+git clone https://github.com/gdangelo/data-science-machine-learning-artificial-intelligence-blog
+cd data-science-machine-learning-artificial-intelligence-blog/
+git submodule update --init --recursive
+
 # Install virtualenv via pip
 pip install virtualenv
 
