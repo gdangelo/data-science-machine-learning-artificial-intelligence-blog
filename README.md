@@ -18,8 +18,10 @@ Clone the repo, then run:
 # Install virtualenv via pip
 pip install virtualenv
 
-# Create a virtual environment
+# Create a virtual environment and activate it
 virtualenv venv
+source venv/bin/activate (UNIX)
+venv\Scripts\activate.bat (WINDOWS)
 
 # Install all the dependencies
 pip install -r requirements.txt
