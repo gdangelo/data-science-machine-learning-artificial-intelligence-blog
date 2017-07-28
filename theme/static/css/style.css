@@ -499,6 +499,16 @@ figcaption h2 {
   -webkit-transform: translate3d(0,20px,0);
   transform: translate3d(0,20px,0);
 }
+@media (min-width: 992px) {
+  figcaption h2 {
+    margin-top: 10%;
+  }
+}
+@media (min-width: 1200px) {
+  figcaption h2 {
+    margin-top: 20%;
+  }
+}
 figcaption p {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
