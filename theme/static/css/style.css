@@ -343,44 +343,40 @@ section.grey {
 
 /* Homepage styles : About section
 -------------------------------------------------- */
-.about-section {
-  font-size: 1.2em;
-}
-@media (min-width: 332px) {
-  .welcome-text blockquote {
-    text-align: center;
-  }
-}
-@media (min-width: 992px) {
-  .about-section {
-    padding-bottom: 0;
-  }
-  .welcome-text {
-    padding-left: 20px;
-  }
-  .welcome-text blockquote {
-    text-align: left;
-  }
-}
-.welcome-img img {
-  width: 100%;
+.about-section .section-title {
+  margin-bottom: 30px;
 }
 .welcome-text blockquote {
   border: none;
   font-family: Georgia, serif;
-  font-size: 30px;
   font-style: italic;
-  line-height: 1.45;
+  text-align: center;
+  font-size: 1.5em;
+}
+blockquote:before, blockquote:after {
   position: relative;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  line-height: 1;
+  color: #7a7a7a;
+  font-size: 2em;
+}
+@media (min-width: 768px) {
+  .welcome-text blockquote {
+    font-size: 2em;
+  }
+  blockquote:before, blockquote:after {
+    top: 15px;
+  }
 }
 .welcome-text blockquote:before {
-  display: block;
+  left: -10px;
   content: "\201C";
-  font-size: 80px;
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  color: #7a7a7a;
+}
+.welcome-text blockquote:after {
+  right: 0;
+  content: "\201D";
 }
 .highlight {
   color: #000;
