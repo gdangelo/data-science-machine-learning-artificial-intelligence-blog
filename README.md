@@ -12,27 +12,38 @@
 
 ## Quickstart
 
+**1. Clone the repo**
+
 ```
-# Clone the repo
 git clone https://github.com/gdangelo/data-science-machine-learning-artificial-intelligence-blog
 cd data-science-machine-learning-artificial-intelligence-blog/
 git submodule update --init --recursive
+```
 
-# Install virtualenv via pip
+**2. Install virtualenv via pip**
+```
 pip install virtualenv
+```
 
-# Create a virtual environment and activate it
+**3. Create a virtual environment and activate it**
+```
 virtualenv venv
 source venv/bin/activate (UNIX)
 venv\Scripts\activate.bat (WINDOWS)
+```
 
-# Install all the dependencies
+**4. Install all the dependencies**
+```
 pip install -r requirements.txt
+```
 
-# Generate site
+**5. Generate site**
+```
 make regenerate
+```
 
-# Start the server
+**6. Start the server**
+```
 make serve
 ```
 
