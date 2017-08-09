@@ -671,6 +671,12 @@ figcaption p {
 section.contact-me {
   text-align: center;
 }
+.avatar {
+  border-radius: 50%;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+}
 .btn {
   margin-right: 0px;
   border-color: #000;
