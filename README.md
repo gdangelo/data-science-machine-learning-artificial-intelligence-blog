@@ -7,7 +7,7 @@
 * [Python](https://www.python.org/);
 * [Virtualenv](http://python-guide-pt-br.readthedocs.io/en/latest/dev/virtualenvs/);
 * [Pelican](http://docs.getpelican.com/en/stable/);
-* ... 
+* ...
 * See [requirements.txt](https://github.com/gdangelo/data-science-machine-learning-artificial-intelligence-blog/blob/master/requirements.txt) for all dependencies;
 
 ## Quickstart
@@ -47,7 +47,7 @@ make regenerate
 make serve
 ```
 
-That will regenerate files upon modification and serve site at `http://localhost:8000`.
+That will regenerate files upon modification and serve site at [http://localhost:8000](http://localhost:8000).
 
 ## File Structure
 
@@ -77,11 +77,11 @@ root/
  |        └── tag.html                   * Processed for each tag
  |
  ├── venv/                               * Python virtual environment
- ├── develop_server.sh 
+ ├── develop_server.sh
  ├── fabfile.py                          * Automation tool (Fabric) for generation and publication tasks  
  ├── Makefile                            * Automation tool (Make) for generation and publication tasks  
  ├── pelicanconf.py                      * Main settings file
  ├── publishconf.py                      * Settings to use when ready to publish
- ├── README.md 
+ ├── README.md
  └── requirements.txt                    * List of package dependencies
 ```
