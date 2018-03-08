@@ -31,7 +31,7 @@ $(function(){
   $(document).on('click', '.smooth-scroll', function(event){
     event.preventDefault();
     $('html, body').animate({
-      scrollTop: $( $.attr(this, 'href') ).offset().top
+      scrollTop: $( $.attr(this, 'href') ).offset().top - 70
     }, 1000);
   });
 
