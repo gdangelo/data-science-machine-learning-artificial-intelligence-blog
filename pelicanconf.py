@@ -48,3 +48,6 @@ PLUGIN_PATHS = ['./plugins']
 PLUGINS = ['ipynb.markup']
 
 DIRECT_TEMPLATES = ['index', 'about', 'contact', 'search']
+
+# static paths will be copied under the same name
+STATIC_PATHS = ["assets"]
