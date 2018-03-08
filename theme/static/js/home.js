@@ -6,7 +6,7 @@ $(function(){
    * ----------------------------------------------------------------------------------------
    */
 	$("#typed").typed({
-		strings: ["a Data Scientist.^500", "a Machine Learning Engineer.^1000", "Greg."],
+		strings: ["a Self-Driving Cars Engineer.^500", "a Deep Learning Enthusiast.^1000", "Greg."],
 		typeSpeed: 0,
     callback: function() {
       $(".sub-tagline").css("opacity", "1");
