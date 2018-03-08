@@ -1,7 +1,0 @@
-Title: Test5
-Slug: test5
-Date: 2015-05-14 15:16
-Category: Data Preprocessing
-Tags: Machine Learning, Outliers
-Author: Grégory D'Angelo
-Summary: Selecting the number of clusters with silhouette analysis on K-Means clustering
