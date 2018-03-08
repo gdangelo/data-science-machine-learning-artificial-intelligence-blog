@@ -77,75 +77,76 @@
     <div class="row">
       <ul class="work">
         <li class="filter" data-filter="all">all</li>
-        <li class="filter" data-filter=".supervised-learning">Supervised Learning</li>
-        <li class="filter" data-filter=".unsupervised-learning">Unsupervised Learning</li>
-        <li class="filter" data-filter=".reinforcement-learning">Reinforcement Learning</li>
+        <li class="filter" data-filter=".localization">Localization</li>
+        <li class="filter" data-filter=".object-tracking">Object Tracking</li>
+        <li class="filter" data-filter=".computer-vision">Computer Vision</li>
+        <li class="filter" data-filter=".deep-learning">Deep Learning</li>
       </ul>
     </div>
     <div class="work-inner">
       <div class="row work-posts grid">
-        <div class="col-md-4 col-sm-6 mix supervised-learning" style="display: inline-block;">
+        <div class="col-md-4 col-sm-6 mix localization" style="display: inline-block;">
           <a href="#">
             <figure>
               <img src="theme/img/project-1.jpg" alt="">
               <figcaption>
-                <h2>Finding Donors</h2>
-                <p>Supervised Learning</p>
+                <h2>Vehicle Localization</h2>
+                <p>with a Particle Filter</p>
               </figcaption>
             </figure>
           </a>
         </div>
-        <div class="col-md-4 col-sm-6 mix unsupervised-learning" style="display: inline-block;">
+        <div class="col-md-4 col-sm-6 mix object-tracking" style="display: inline-block;">
           <a href="#">
             <figure>
               <img src="theme/img/project-2.jpg" alt="">
               <figcaption>
-                <h2>Finding Donors</h2>
-                <p>Supervised Learning</p>
+                <h2>Object Tracking</h2>
+                <p>with Sensor Fusion-based Unscented Kalman Filter</p>
               </figcaption>
             </figure>
           </a>
         </div>
-        <div class="col-md-4 col-sm-6 mix reinforcement-learning" style="display: inline-block;">
+        <div class="col-md-4 col-sm-6 mix object-tracking computer-vision deep-learning" style="display: inline-block;">
           <a href="#">
             <figure>
               <img src="theme/img/project-3.jpg" alt="">
               <figcaption>
-                <h2>Finding Donors</h2>
-                <p>Supervised Learning</p>
+                <h2>Vehicle Detection and Tracking</h2>
+                <p>with Computer Vision and Deep Learning</p>
               </figcaption>
             </figure>
           </a>
         </div>
-        <div class="col-md-4 col-sm-6 mix supervised-learning" style="display: inline-block;">
+        <div class="col-md-4 col-sm-6 mix computer-vision" style="display: inline-block;">
           <a href="#">
             <figure>
-              <img src="theme/img/project-4.jpg" alt="">
+              <img src="theme/img/project-3.jpg" alt="">
               <figcaption>
-                <h2>Finding Donors</h2>
-                <p>Supervised Learning</p>
+                <h2>Advanced Lane Finding</h2>
+                <p>with Computer Vision</p>
               </figcaption>
             </figure>
           </a>
         </div>
-        <div class="col-md-4 col-sm-6 mix unsupervised-learning" style="display: inline-block;">
+        <div class="col-md-4 col-sm-6 mix deep-learning" style="display: inline-block;">
           <a href="#">
             <figure>
-              <img src="theme/img/project-5.jpg" alt="">
+              <img src="theme/img/project-3.jpg" alt="">
               <figcaption>
-                <h2>Finding Donors</h2>
-                <p>Supervised Learning</p>
+                <h2>Driving Behavior Cloning</h2>
+                <p>with Convolutional NN</p>
               </figcaption>
             </figure>
           </a>
         </div>
-        <div class="col-md-4 col-sm-6 mix unsupervised-learning" style="display: inline-block;">
+        <div class="col-md-4 col-sm-6 mix deep-learning" style="display: inline-block;">
           <a href="#">
             <figure>
-              <img src="theme/img/project-6.jpg" alt="">
+              <img src="theme/img/project-3.jpg" alt="">
               <figcaption>
-                <h2>Finding Donors</h2>
-                <p>Supervised Learning</p>
+                <h2>Traffic Sign Classification</h2>
+                <p>with Convolutional NN</p>
               </figcaption>
             </figure>
           </a>
@@ -169,8 +170,9 @@
       {% for category in categories %}
         <a href="{{SITEURL}}/category/{{category[0].slug}}.html" class="category-link">{{category[0]}}</a>
       {% endfor %}
+      <h2>...</h2>
     </div>
-    <a href="{{SITEURL}}/blog" type="button" class="btn btn-lg btn-white-rounded">See All Articles</a>
+    <a href="#" type="button" class="btn btn-lg btn-white-rounded">Coming Soon</a>
   </div>
 </section>
 
