@@ -380,12 +380,14 @@ a[type="button"].btn-white-rounded:hover {
   text-align: justify;
   font-size: 17px;
 }
-.highlight {
+a.highlight {
   color: #fff;
   text-decoration: none;
   border-bottom: 2px solid #ffc932;
 }
-.highlight:hover {
+a.highlight:visited,
+a.highlight:hover,
+a.highlight:active {
   color: #fff;
   text-decoration: none;
 }
