@@ -40,6 +40,10 @@ $(function(){
    *  WORK JS
    * ----------------------------------------------------------------------------------------
    */
-	var mixer = mixitup('.work-inner');
+		var mixer = mixitup('.work-inner', {
+	    selectors: {
+	       control: '[data-mixitup-control]'
+	    }
+		});
 
 });
