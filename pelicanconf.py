@@ -42,10 +42,10 @@ ARTICLE_SAVE_AS = '{category}/{slug}.html'
 
 AUTHOR_SAVE_AS = False
 
-MARKUP = ('md', 'ipynb')
+MARKUP = ('md')
 
-PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb.markup']
+#PLUGIN_PATHS = ['./plugins']
+#PLUGINS = ['ipynb.markup']
 
 DIRECT_TEMPLATES = ['index', 'about', 'contact', 'search']
 
