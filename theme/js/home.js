@@ -21,7 +21,7 @@ $(function(){
    * ----------------------------------------------------------------------------------------
    */
   // particlesJS.load(@dom-id, @path-json, @callback (optional));
-  particlesJS.load('particles-js', "theme/particlesjs-config.json");
+	particlesJS.load('particles-js', 'assets/particles-config.json');
 
 	/*
    * ----------------------------------------------------------------------------------------
