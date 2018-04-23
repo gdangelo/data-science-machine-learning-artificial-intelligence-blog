@@ -50,4 +50,8 @@ MARKUP = ('md')
 DIRECT_TEMPLATES = ['index', 'about', 'contact', 'search']
 
 # static paths will be copied under the same name
-STATIC_PATHS = ["assets"]
+STATIC_PATHS = ['assets', 'extra/CNAME', 'extra/favicon.png']
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'},
+    'extra/favicon.png': {'path': 'favicon.png'},
+}
